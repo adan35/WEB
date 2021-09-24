@@ -3,7 +3,7 @@ const div = document.getElementById('btnclass')
 
 btn.addEventListener('click', () => {
     const p = document.createElement('p')
-    p.style = 'color: black; margin-right: 200px; margin-left: 200px;'
+    p.style = 'color: black;'
     p.textContent = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam eum
     perferendis necessitatibus ipsa debitis. Quisquam temporibus aperiam
     incidunt perferendis fugit sed distinctio, dignissimos eligendi eius
