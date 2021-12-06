@@ -33,15 +33,14 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         const createdAt = new Date();
 
         try {
-            const docRef = await addDoc(users, {
+            await addDoc(users, {
                 displayName,
                 email,
                 createdAt,
                 ...additionalData
             });
-            console.log("Document written with ID: ", docRef.id);
         } catch (error) {
-            console.log("error created at user", error.message);
+            alert("error created at user" + error.message);
         }
     }
 
