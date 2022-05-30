@@ -1,6 +1,10 @@
-<h1>showing selected article</h1>
-<p>title: <%= @article.title %></p>
-<p>description: <%= @article.description %></p>
+<br/><br/><br/>
 
-<%= link_to 'back', articles_path %>
-<%= link_to 'edit', edit_article_path %>
+<h2><strong>Title: </strong><%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2 px-2 py-3">
+  <h4><strong>Description: </strong><%= @article.description %></h4>
+</div>
+
+<%= link_to 'back', articles_path, class: 'btn btn-primary btn-md px-1 py-1' %>
+<%= link_to 'delete', articles_path(@article), method: 'delete', data: {confirm: 'Are you sure'}, class: 'btn btn-danger btn-md px-1 py-1 mx-1' %>
+<%= link_to 'edit', edit_article_path, class: 'btn btn-success btn-md px-1 py-1' %>
