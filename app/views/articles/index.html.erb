@@ -11,6 +11,11 @@
           <div class="card-title">
             <%= truncate(article.description, length: 100) %>
           </div>
+          <div class="small-details">
+            <small>Created by: <%= article.user.username if article.user %>,
+            created at: <%= time_ago_in_words(article.created_at) %> ago,
+            last update: <%= time_ago_in_words(article.updated_at) %> ago</small>
+          </div>
           <%= link_to 'edit' , edit_article_path(article), class: 'btn btn-success btn-md px-1 py-1' %>
           <%= link_to 'delete' , article_path(article), method: 'delete' , data: {confirm: 'Are you sure' },
           class: 'btn btn-danger btn-md px-1 py-1 mx-1' %>
