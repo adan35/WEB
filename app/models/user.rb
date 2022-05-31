@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   has_many :articles
   before_save { self.email = email.downcase }
   validates :username, presence: true, 
@@ -9,5 +9,5 @@ class User < ApplicationRecord
             uniqueness: { case_sensitive: false },
             length: { maximum: 100 },
             format: { with: VALID_EMAIL_REGEX }
-  validates :user_id, presence: true
+  has_secure_password
 end
