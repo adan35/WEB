@@ -12,7 +12,7 @@
             <%= truncate(article.description, length: 100) %>
           </div>
           <%= link_to 'edit' , edit_article_path(article), class: 'btn btn-success btn-md px-1 py-1' %>
-          <%= link_to 'delete' , articles_path(article), method: 'delete' , data: {confirm: 'Are you sure' },
+          <%= link_to 'delete' , article_path(article), method: 'delete' , data: {confirm: 'Are you sure' },
           class: 'btn btn-danger btn-md px-1 py-1 mx-1' %>
         </div>
       </div>
