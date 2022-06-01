@@ -33,3 +33,8 @@
   text-align: center;
   padding: 5px;
 }
+
+.pagination-center{
+  width: 50%;
+  margin: 0 auto;
+}

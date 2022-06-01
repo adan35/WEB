@@ -9,6 +9,9 @@
     <%= @user.username %>'s articles
   </h4>
   <div class="center-card">
-    <%= render 'articles/article', obj: @user.articles %>
+    <%= render 'articles/article', obj: @user_articles %>
+  </div>
+  <div class="pagination-center">
+    <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
   </div>
 </div>
