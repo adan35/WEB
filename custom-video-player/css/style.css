@@ -17,6 +17,7 @@ body {
 
 h1 {
   color: #fff;
+  margin-bottom: 3rem;
 }
 
 .screen {
@@ -29,7 +30,7 @@ h1 {
 
 .controls {
   background: #333;
-  color: #fff;
+  color: white;
   width: 60%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -54,11 +55,11 @@ h1 {
 }
 
 .controls .fa-pause {
-  color: #fff;
+  color: white;
 }
 
 .controls .timestamp {
-  color: #fff;
+  color: white;
   font-weight: bold;
   margin-left: 10px;
 }
@@ -67,9 +68,16 @@ h1 {
   outline: 0;
 }
 
-@media (max-width: 800px) {
-  .screen,
-  .controls {
+video {
+  max-height: 700px;
+}
+
+@media(max-width: 800px) {
+  .screen, .controls {
     width: 90%;
   }
+  video {
+    max-height: 450px;
+  }
+  
 }
