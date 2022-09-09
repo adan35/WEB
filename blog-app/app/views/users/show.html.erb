@@ -1,0 +1,17 @@
+<div class="my-2">
+  <h1 class="py-2">Welcome to <%= @user.username %>'s page</h1>
+
+  <div class="py-2">
+    <%= gravatar_for @user, size: 150%>
+  </div>
+
+  <h4 class="py-2">
+    <%= @user.username %>'s articles
+  </h4>
+  <div class="center-card">
+    <%= render 'articles/article', obj: @user_articles %>
+  </div>
+  <div class="pagination-center">
+    <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
+</div>

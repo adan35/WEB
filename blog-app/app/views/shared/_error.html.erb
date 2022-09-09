@@ -1,0 +1,14 @@
+<% if obj.errors.any? %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <h1><%= pluralize(obj.errors.count, 'errors') %> prevents the <%= obj.class %> from creatation</h1>
+    <a href="#" class="close" data-dismiss="alert" role="alert">&times;</a>
+  </div>
+  <ul>
+    <% obj.errors.full_messages.each do |msg| %>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <li><%= msg %></li>
+          <a href="#" class="close" data-dismiss="alert" role="alert">&times;</a>
+      </div>
+    <% end %>
+  </ul>
+<% end %>

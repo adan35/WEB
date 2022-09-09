@@ -1,0 +1,15 @@
+<h1>All articles</h1>
+
+<div class="pagination-center">
+  <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
+
+<%= render 'article', obj: @articles %>
+
+<div class="pagination-center">
+  <%= will_paginate(@things, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+</div>
+
+<br/>
+<br/>
+<br/>

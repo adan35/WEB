@@ -1,0 +1,19 @@
+<br/><br/><br/>
+<% if @article.user %>
+  <div class="py-4">
+    <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+    <span class="ml-3">
+      <%= link_to @article.user.username, user_path(@article.user.username), class: 'card-title' %>
+    </span>
+      <div class="small col-sm-2"><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></div> 
+  </div>
+<% end %>
+<h2><strong>Title: </strong><%= @article.title %></h2>
+
+<div class="col-xs-8 col-xs-offset-2 px-2 py-3">
+  <h4><strong>Description: </strong><%= @article.description %></h4>
+</div>
+
+<%= link_to 'back', articles_path, class: 'btn btn-primary btn-md px-1 py-1' %>
+<%= link_to 'delete', articles_path(@article), method: 'delete', data: {confirm: 'Are you sure'}, class: 'btn btn-danger btn-md px-1 py-1 mx-1' %>
+<%= link_to 'edit', edit_article_path, class: 'btn btn-success btn-md px-1 py-1' %>
